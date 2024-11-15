@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="../src/scripts/animation.js"></script>
+    <title>César Vidros</title>
+  </head>
+  <body>
+    <header>
+      <div class="name_corporation">César Vidros</div>
+      <nav>
+        <ul>
+          <a href="index.html">
+            <li>Home</li>
+          </a>
+          <a href="#about_us">
+            <li>sobre nós</li>
+          </a>
+          <a href="#projects">
+            <li>Projetos</li>
+          </a>
+          <a href="#budget">
+            <li>Orçamento</li>
+          </a>
+          <a href="#contact_us">
+            <li>Contato</li>
+          </a>
+          <a href="">
+            <li>carrinho</li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+    <section class="banner">
+      <div class="banner_title">sua visão, nossos vidros !</div>
+      <div class="banner_text"> Transformando Suas Ideias em Realidades Transparentes </div>
+      <button class="banner_button">sobre nós</button>
+    </section>
+    <main>
+      <section class="about_us" id="about_us">
+        <div class="card_about_us">
+          <div class="title">Sobre Nós</div>
+          <div class="text"> Na César Vidros, somos apaixonados por vidro e design. Com anos de experiência no setor, nossa missão é fornecer soluções de vidro de alta qualidade que atendam às necessidades e expectativas de nossos clientes. Acreditamos que cada projeto é uma oportunidade de transformar espaços e criar ambientes que inspirem e encantem. </div>
+          <div class="values">
+            <h3>Nossos Valores</h3>
+            <ul>
+              <li> Qualidade: Comprometemo-nos a oferecer produtos de excelência. </li>
+              <li> Inovação: Buscamos constantemente novas ideias e tecnologias. </li>
+              <li> Atendimento ao Cliente: Valorizamos cada cliente e trabalhamos para superar suas expectativas. </li>
+              <li> Sustentabilidade: Priorizamos práticas que respeitem o meio ambiente. </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="title">nossos projetos</div>
+        <div class="text"> Na César Vidros, somos especialistas em transformar sonhos e visões em realidade. Nosso portfólio apresenta uma variedade de projetos que atendem às necessidades de nossos clientes. </div>
+        <article class="cards_projects">
+          <div class="card img1">
+            <div class="text_card">
+              <div class="title">Janela de duas folhas</div>
+              <div class="subtitle">fechamento da área de luz</div>
+            </div>
+          </div>
+          <div class="division_card">
+            <div class="card img2">
+              <div class="text_card">
+                <div class="title">Basculante duplo</div>
+                <div class="subtitle">Janela superior da área de luz</div>
+              </div>
+            </div>
+            <div class="card img3">
+              <div class="text_card">
+                <div class="title">Fachada</div>
+                <div class="subtitle">Vitrine de Shopping</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="budget" id="budget">
+        <div class="title_budget">Orçamento Online</div>
+        <form action="">
+          <article class="input_group">
+            <label for="name_costumer">Nome: </label>
+            <input type="text" id="name_costumer" name="name_costumer" />
+          </article>
+          <article class="input_group">
+            <label for="email_costumer">E-mail: </label>
+            <input type="email" id="email_costumer" name="email_costumer" />
+          </article>
+          <article class="input_group">
+            <label for="products">Produto: </label>
+            <select value="Produtos" id="products">
+              <option value="porta">porta</option>
+              <option value="janela">janela</option>
+              <option value="basculante">basculante</option>
+            </select>
+          </article>
+          <article class="input_group">
+            <label for="product_color">Cor: </label>
+            <select value="Cor do produto" id="product_color">
+              <option value="incolor">incolor</option>
+              <option value="verde">verde</option>
+              <option value="fume">fumê</option>
+            </select>
+          </article>
+          <article class="input_group">
+            <label for="heigth_glass">Altura: </label>
+            <input type="number" id="heigth_glass" name="heigth_glass" />
+          </article>
+          <article class="input_group">
+            <label for="width_glass">Largura: </label>
+            <input type="number" id="width_glass" name="width_glass" />
+          </article>
+          <article class="button_submit">
+            <input type="submit" value="Enviar" />
+          </article>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <section class="contact_us" id="contact_us">
+        <div class="title">Contato</div>
+        <ul>
+          <li>
+            <div class="icone">(icone facebook)</div>
+            <div class="social">facebook</div>
+          </li>
+          <li>
+            <div class="icone">(icone instagram)</div>
+            <div class="social">instagram</div>
+          </li>
+          <li>
+            <div class="icone">(icone whatsapp)</div>
+            <div class="social">whatsapp</div>
+          </li>
+        </ul>
+      </section>
+      <section class="copyright">
+        <div class="copyright"> copyright © 2024 César Vidros. Todos os direitos reservados. </div>
+      </section>
+    </footer>
+  </body>
+</html>

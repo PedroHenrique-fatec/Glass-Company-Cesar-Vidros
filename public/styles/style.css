@@ -1,0 +1,423 @@
+:root {
+  /* Color Palette */
+  --primary-color: #007acc; /* Main Blue */
+  --primary-color-dark: #005ea2; /* Darker Blue for hover effects */
+  --background-color: #ffffff; /* White background */
+  --text-color: #333333; /* Dark text */
+  --text-color-light: #555555; /* Lighter text for descriptions */
+  --accent-color: #f0f8ff; /* Light blue accent for backgrounds */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+header .name_corporation {
+  font-size: 25px;
+  font-weight: 300;
+  width: fit-content;
+  text-transform: uppercase;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul a:last-child {
+  margin-left: 50px;
+  border-left: #d1e9ff 1px solid;
+  padding-left: 50px;
+}
+
+nav ul a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  margin: 2px 12px;
+}
+
+nav ul li a:hover {
+  color: #d1e9ff;
+}
+
+/* Main */
+main {
+  padding: 0 15px;
+  margin-top: 25px;
+}
+
+/* Section Banner */
+.banner {
+  background-image: url("../images/Banner.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.banner .banner_title {
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.banner .banner_text {
+  margin-top: 12px;
+  font-size: 25px;
+}
+
+.banner .banner_button {
+  margin-top: 35px;
+  padding: 20px 30px;
+  border-radius: 6px;
+  border: none; /* Blue border color */
+  background-color: transparent; /* Makes the button transparent */
+  color: white; /* Text color */
+  box-shadow: rgba(16, 16, 80, 0.25) 0px 30px 60px -12px inset,
+    rgba(95, 43, 43, 0.3) 0px 18px 36px -18px inset;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.banner .banner_button:hover {
+  border: 2px solid blue; /* Blue border color */
+  background-color: white; /* Fills with blue on hover */
+  color: blue; /* White text on hover */
+}
+
+/* About Us Section */
+.about_us {
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.about_us.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card_about_us {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Title Styling */
+.about_us .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Text Styling */
+.about_us .text {
+  font-size: 1.1rem;
+  color: var(--text-color-light);
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Values Section */
+.about_us .values h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about_us .values ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about_us .values li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Custom bullet icon */
+.about_us .values li::before {
+  content: "•";
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Section Projects */
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 65px 0;
+  width: 100%;
+}
+
+.projects > .title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.projects .text {
+  font-size: 25px;
+  text-align: center;
+  padding: 0 55px;
+  margin-top: 15px;
+}
+
+.projects .cards_projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 40px;
+  width: 100%;
+  gap: 5px;
+}
+
+.projects .cards_projects .card {
+  font-size: 16px;
+  padding: 25px;
+  color: white;
+  border-radius: 8px;
+}
+
+.projects .cards_projects .card .title {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.projects .cards_projects > .card {
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/project_one.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(-250px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.projects .cards_projects > .card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects .cards_projects .division_card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.projects .cards_projects .division_card > .card {
+  width: 100%;
+  height: 50%;
+}
+
+.projects .cards_projects .division_card > .card.img2 {
+  background-image: url("../images/project_two.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transform: translateY(250px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.projects .cards_projects .division_card > .card.img2.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects .cards_projects .division_card > .card.img3 {
+  background-image: url("../images/project_three.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(250px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.projects .cards_projects .division_card > .card.img3.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Budget */
+.budget {
+  background-color: #f9f9f9;
+}
+
+.budget .title_budget {
+  text-align: center;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding-top: 50px;
+}
+
+/* Form Styling */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  border: 1px solid #ddd;
+}
+
+.input_group {
+  margin-bottom: 15px;
+}
+
+.input_group label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input_group input[type="text"],
+.input_group input[type="email"],
+.input_group input[type="number"],
+.input_group select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.input_group input[type="text"]:focus,
+.input_group input[type="email"]:focus,
+.input_group input[type="number"]:focus,
+.input_group select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* Submit Button */
+.button_submit input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--background-color);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button_submit input[type="submit"]:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+footer .contact_us .title {
+  font-size: 35px;
+  text-transform: uppercase;
+}
+
+footer .contact_us ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .contact_us ul li {
+  display: flex;
+  padding: 20px 0;
+}
+
+footer .contact_us ul li div {
+  margin: 5px 6px;
+}
+
+footer .copyright {
+  margin-bottom: 18px;
+}
